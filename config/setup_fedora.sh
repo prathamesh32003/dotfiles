@@ -27,6 +27,9 @@ sudo dnf install libva-nvidia-driver.{i686,x86_64} -y
 sudo dnf install rpmfusion-nonfree-release-tainted -y
 sudo dnf --repo=rpmfusion-nonfree-tainted install "*-firmware" -y
 
+sudo dnf install dejavu-sans-fonts dejavu-serif-fonts dejavu-sans-mono-fonts liberation-fonts cantarell-fonts noto-sans-fonts noto-serif-fonts xorg-x11-fonts-Type1 xorg-x11-fonts-misc mscore-fonts google-noto-* google-roboto-fonts liberation-fonts 
+
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub md.obsidian.Obsidian
 flatpak install flathub com.spotify.Client
