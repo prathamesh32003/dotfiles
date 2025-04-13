@@ -33,6 +33,5 @@ flatpak install flathub com.spotify.Client
 
 curl -sS https://starship.rs/install.sh | sh
 
-git clone https://github.com/prathamesh32003/dotfiles.git
-mv dotfiles/config/nvim ~/.config/
-mv dotfiles/config/starship.toml ~/.config/
+mv nvim/ ~/.config/
+mv starship.toml ~/.config/
