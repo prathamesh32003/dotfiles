@@ -4,7 +4,10 @@ sudo dnf install neovim plymouth plymouth-system-theme aria2 -y
 
 sudo plymouth-set-default-theme bgrt -R
 
-sudo dnf install gnome-shell nautilus ptyxis flatpak lutris -y
+sudo dnf install gnome-shell nautilus ptyxis flatpak lutris firefox -y
+
+sudo systemctl enable gdm
+sudo systemctl set-default graphical.target
 
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1 -y
@@ -28,6 +31,7 @@ sudo dnf install rpmfusion-nonfree-release-tainted -y
 sudo dnf --repo=rpmfusion-nonfree-tainted install "*-firmware" -y
 
 sudo dnf install dejavu-sans-fonts dejavu-serif-fonts dejavu-sans-mono-fonts liberation-fonts cantarell-fonts noto-sans-fonts noto-serif-fonts xorg-x11-fonts-Type1 xorg-x11-fonts-misc mscore-fonts google-noto-* google-roboto-fonts liberation-fonts 
+fc-cache -frv
 
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -38,3 +42,4 @@ curl -sS https://starship.rs/install.sh | sh
 
 mv nvim/ ~/.config/
 mv starship.toml ~/.config/
+mv MangoHud/ ~/.config/
